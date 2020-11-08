@@ -5,9 +5,18 @@ require(`dotenv`).config({
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
+  pathPrefix: "/my-writings",
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-  },
+    siteTitle: `Alex Rose`,
+    siteTitleAlt: `Alex Rose`,
+    siteHeadline: `Alex Rose`,
+    siteUrl: `https://acrose99.github.io`,
+    siteDescription: `Alex writes about things`,
+    siteLanguage: `en`,
+    siteImage: `/banner.jpg`,
+    author: `@AlexRose`,
+  }
+  ,
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
@@ -15,22 +24,12 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `Blog`,
+            title: `Writings`,
             slug: `/blog`,
           },
           {
-            title: `About`,
+            title: `What is this?`,
             slug: `/about`,
-          },
-        ],
-        externalLinks: [
-          {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
           },
         ],
       },
@@ -45,8 +44,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
+        name: `Alex's Writings`,
+        short_name: `Alex's Writings`,
         description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
         start_url: `/`,
         background_color: `#fff`,
